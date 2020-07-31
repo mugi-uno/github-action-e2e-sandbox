@@ -9,6 +9,6 @@ jobs:
     # This job runs on Linux
     runs-on: windows-latest
     steps:
-      - name: actions/checkout@v1
+      - uses: actions/checkout@v1
       - name: Echo
         run: echo 'The time was ${{ steps.hello.outputs.time }}.'
