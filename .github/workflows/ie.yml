@@ -1,0 +1,14 @@
+name: Hello
+# This workflow is triggered on pushes to the repository.
+on: [push]
+
+jobs:
+  build:
+    # Job name is Greeting
+    name: Hello
+    # This job runs on Linux
+    runs-on: windows-latest
+    steps:
+      - name: actions/checkout@v1
+      - name: Echo
+        run: echo 'The time was ${{ steps.hello.outputs.time }}.'
